@@ -1,68 +1,75 @@
-import 
+#include <stdio.h>
 
-# Cartas de países com seus atributos
-cartas = {
-    "Brasil": {
-    "População (milhões)": 215,
-        "Área (milhões km²)": 8.5,
-        "PIB (trilhões)": 1.9
-    },
-    "Estados Unidos": {
-"População (milhões)": 331,
-"Área (milhões km²)": 9.8, 
-        "PIB (trilhões)": 25.5
-    },
-    "Japão": {
-        "População (milhões)": 125,
-        "Área (milhões km²)": 0.377,
-        "PIB (trilhões)": 4.9
-    },
-    "Alemanha": {
-        "População (milhões)": 83,
-        "Área (milhões km²)": 0.357,
-        "PIB (trilhões)": 4.3
-    },
-    "Índia": {
-        "População (milhões)": 1400,
-        "Área (milhões km²)": 3.3,
-        "PIB (trilhões)": 3.7
-    }
-}
+int man() {
+    Declaração de variáveis para a Carta 1
+    char estado1;
+    char codigo1[4];
+    char nomeCidade1[50];
+    int populacao1;
+    float area1;
+    float pib1;
+    int pontosTuristicos1;
 
-# Escolher uma carta para o jogador e uma para o computador
-minha_carta = random.choice(list(cartas.keys()))
-carta = random.choice([pais for pais in cartas if pais != minha_carta])
+    Declaração de variáveis para a Carta 2
+    char estado2;
+    char codigo2[4];
+    char nomeCidade2[50];
+    int populacao2;
+    float area2;
+    float pib2;
+    int pontosTuristicos2;
 
-print("Bem-vindo ao Super Trunfo de Países!")
-print("Sua carta é:", minha_carta)
-print("Atributos disponíveis:")
-print("1 - População (milhões)")
-print("2 - Área (milhões km²)")
-print("3 - PIB (trilhões)")
-escolha = input("Escolha o número do atributo para competir: ")
+    Entrada de dados da Carta 1
+    printf("Cadastro da Carta 1:\n");
+    printf("Digite o estado (letra de A a H): ");
+    scanf(" %c", &estado1);
+    printf("Digite o código da carta (ex: A01): ");
+    scanf("%s", codigo1);
+    printf("Digite o nome da cidade: ");
+    scanf(" %[^\n]s", nomeCidade1);
+    printf("Digite a população da cidade: ");
+    scanf("%d", &populacao1);
+    printf("Digite a área da cidade (em km²): ");
+    scanf("%f", &area1);
+    printf("Digite o PIB da cidade (em bilhões): ");
+    scanf("%f", &pib1);
+    printf("Digite o número de pontos turísticos: ")
 
-# Comparar os valores
-f escolha == "1":
-    atributo = "População (milhões)"
-elif escolha == "2":
-    atributo = "Área (milhões km²)"
-elif escolha == "3":
-    atributo = "PIB (trilhões)"
-else:
-    print("Opção inválida.")
-    exit()
+    printf("\n");
 
-valor = cartas[minha_carta][atributo]
-valor pc = cartas[carta_pc][atributo]
+    // Entrada de dados da Carta 2
+    printf("Cadastro da Carta 2:\n");
+    printf("Digite o estado (letra de A a H): ");
+    scanf(" %c", &estado2);
+    printf("Digite o código da carta (ex: B02): ");
+    scanf("%s", codigo2);
+    printf("Digite o nome da cidade: ");
+    scanf(" %[^\n]s", nomeCidade2);
+    printf("Digite a população da cidade: ");
+    scanf("%d", &populacao2);
+    printf("Digite a área da cidade (em km²): ");
+    scanf("%f", &area2);
+    printf("Digite o PIB da cidade (em bilhões): ");
+    scanf("%f", &pib2);
+    printf("Digite o número de pontos turísticos: ");
+    scanf("%d", &pontosTuristicos2);
 
-print("\nVocê escolheu:", atributo)
-print("Sua carta:", minha_carta, "-", atributo, "=",
-print("Carta do computador:", carta_pc, "-", atributo, "=", valor_pc)
+    Impressão das cartas cadastradas
+    printf("\nCarta 1:\n");
+    printf("Estado: %c\n", estado1);
+    printf("Código: %s\n", codigo1);
+    printf("Nome da Cidade: %s\n", nomeCidade1);
+    printf("População: %d\n", populacao1);
+    printf("Área: %.2f km²\n", area1);
+    printf("PIB: %.2f bilhões de reais\n", pib1);
 
-# Ver quem venceu
-if valor_jogador valor_pc:
-    print("\nParabéns! Você venceu!")
-elif valor_jogador valor_pc:
-    print("\nVocê perdeu. Tente novamente!")
-else:
-    print("\nEmpate!")
+    printf("\nCarta 2:\n");
+    printf("Estado: %c\n", estado2);
+    printf("Código: %s\n", codigo2);
+    printf("Nome da Cidade: %s\n", nomeCidade2);
+    printf("População: %d\n", populacao2);
+    printf("Área: %.2f km²\n", area2);
+    printf("PIB: %.2f bilhões de reais\n", pib2);
+    printf("Número de Pontos Turísticos: %d\n", pontosTuristicos2);
+
+    return 0;
