@@ -1,15 +1,15 @@
-import random
+import 
 
 # Cartas de países com seus atributos
 cartas = {
     "Brasil": {
-        "População (milhões)": 215,
+    "População (milhões)": 215,
         "Área (milhões km²)": 8.5,
         "PIB (trilhões)": 1.9
     },
     "Estados Unidos": {
-        "População (milhões)": 331,
-        "Área (milhões km²)": 9.8,
+"População (milhões)": 331,
+"Área (milhões km²)": 9.8, 
         "PIB (trilhões)": 25.5
     },
     "Japão": {
@@ -31,7 +31,7 @@ cartas = {
 
 # Escolher uma carta para o jogador e uma para o computador
 minha_carta = random.choice(list(cartas.keys()))
-carta_pc = random.choice([pais for pais in cartas if pais != minha_carta])
+carta = random.choice([pais for pais in cartas if pais != minha_carta])
 
 print("Bem-vindo ao Super Trunfo de Países!")
 print("Sua carta é:", minha_carta)
@@ -42,7 +42,7 @@ print("3 - PIB (trilhões)")
 escolha = input("Escolha o número do atributo para competir: ")
 
 # Comparar os valores
-if escolha == "1":
+f escolha == "1":
     atributo = "População (milhões)"
 elif escolha == "2":
     atributo = "Área (milhões km²)"
@@ -52,17 +52,17 @@ else:
     print("Opção inválida.")
     exit()
 
-valor_jogador = cartas[minha_carta][atributo]
-valor_pc = cartas[carta_pc][atributo]
+valor = cartas[minha_carta][atributo]
+valor pc = cartas[carta_pc][atributo]
 
 print("\nVocê escolheu:", atributo)
-print("Sua carta:", minha_carta, "-", atributo, "=", valor_jogador)
+print("Sua carta:", minha_carta, "-", atributo, "=",
 print("Carta do computador:", carta_pc, "-", atributo, "=", valor_pc)
 
 # Ver quem venceu
-if valor_jogador > valor_pc:
+if valor_jogador valor_pc:
     print("\nParabéns! Você venceu!")
-elif valor_jogador < valor_pc:
+elif valor_jogador valor_pc:
     print("\nVocê perdeu. Tente novamente!")
 else:
     print("\nEmpate!")
